@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Eatch-A-Sketch</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+
+        <div id="grid" class="container">
+
+            
+        </div>
+        
+        <script>
+
+            const container = document.querySelector('#grid');
+
+            for (let index = 0; index < 16; index++) {
+                const content_columns = document.createElement('div');
+                content_columns.classList.add("content_columns")
+                for (let index = 0; index < 16; index++) {
+                    const content_rows = document.createElement('div');
+                    content_rows.classList.add("content_rows")
+                    content_rows.textContent = "test"
+                    content_columns.appendChild(content_rows);
+                    
+                }
+                container.appendChild(content_columns);
+
+            }
+
+            const div_color = document.querySelectorAll('.content_rows');
+
+            div_color.forEach((div) => {
+
+                div.addEventListener( "mouseenter",(e) =>{
+                    div.style.backgroundColor = "lightblue";
+                });
+
+
+            }
+
+            );
+
+
+    
+        </script>
+    </body>
+</html>
