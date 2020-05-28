@@ -13,22 +13,32 @@
     </head>
     <body>
 
-        <div id="grid" class="container">
+        <div class="grid">
+
+            <h1>Eatch-A-Sketch</h1>
+
+            <button class="restart">Restart</button>
+
+            <div class="container">
 
             
+            </div>
+
         </div>
+        
         
         <script>
 
-            const container = document.querySelector('#grid');
+            const container = document.querySelector('.container');
 
-            for (let index = 0; index < 16; index++) {
+            let amount = prompt("Please enter your name", 16);
+
+            for (let index = 0; index < amount; index++) {
                 const content_columns = document.createElement('div');
                 content_columns.classList.add("content_columns")
-                for (let index = 0; index < 16; index++) {
+                for (let index = 0; index < amount; index++) {
                     const content_rows = document.createElement('div');
                     content_rows.classList.add("content_rows")
-                    content_rows.textContent = "test"
                     content_columns.appendChild(content_rows);
                     
                 }
@@ -44,11 +54,14 @@
                     div.style.backgroundColor = "lightblue";
                 });
 
+            });
 
-            }
+            const restart = document.querySelector(".restart");
 
-            );
-
+            restart.addEventListener("click",(e) => {
+                location.reload();
+                amount = 64;
+            } );
 
     
         </script>

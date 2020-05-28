@@ -1,4 +1,34 @@
+.grid{
+    display: grid ;
+    grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+    grid-template-rows: [row1-start] 80px [row1-end] auto [third-line] auto [last-line] ;
+
+}
+
+h1{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: row1-start;
+    grid-row-end: 2;
+    text-align: center;
+    margin: auto;
+}
+
+.restart{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: row1-end;
+    grid-row-end: 3;
+    width: 200px;
+    height: 40px;
+    margin: auto;
+}
+
 .container{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,6 +42,6 @@
 
 .content_rows{
 
-    padding: 10px;
+    padding: 5px;
 }
 
